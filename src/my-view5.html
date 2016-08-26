@@ -9,6 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 
 <dom-module id="my-view5">
 
@@ -22,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .card {
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
         padding: 16px;
-        margin: 24px;
+        margin: 25px;
         border-radius: 5px;
         background-color: #fff;
         color: #757575;
@@ -43,13 +45,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      paper-card {
+        margin-left: 25px;
+        margin-top: 15px;
+        --paper-card-header-color: var(--app-primary-color);
+      }
+      .card-content {
+        min-height: 200px;
+        max-width: 250px;
+      }
     </style>
 
     <div class="card">
       <div class="circle">5</div>
       <h1>Meet the Team</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+      <p>A trio of Polymer team members are here to empower you to #usetheplatform and make awesome web applications with the very best cutting edge technology the web platform has to offer.</p>
+
+    <paper-card heading="Elliott Marquez" image="images/emarquez.jpeg" alt="Elliott will be right back.">
+      <div class="card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus urna condimentum, finibus orci et, pharetra tortor. Curabitur quis velit metus. In pharetra purus nec neque auctor pellentesque. 
+      </div>
+      <div class="card-actions">
+        <paper-button href="">Twitter</paper-button>
+        <paper-button href="">GitHub</paper-button>
+      </div>  
+    </paper-card>
+
+    <paper-card heading="Fred Schott" image="images/fschott.jpeg" alt="Fred will be right back.">
+      <div class="card-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus urna condimentum, finibus orci et, pharetra tortor. Curabitur quis velit metus. In pharetra purus nec neque auctor pellentesque. 
+      </div>
+      <div class="card-actions">
+        <paper-button href="">Twitter</paper-button>
+        <paper-button href="">GitHub</paper-button>
+      </div> 
+    </paper-card>
+
+    <paper-card heading="Wendy Ginsberg" image="images/wmginsberg.jpeg" alt="Wendy will be right back.">
+      <div class="card-content">
+        Wendy is a Product Manager on the Polymer team working on Growth, Onboarding, and Outreach. She is originally from New York, studied Computer Science at Brown, and loves turtles. 
+      </div>
+      <div class="card-actions">
+        <a href="http://www.twitter.com/wmginsberg"><paper-button>Twitter</paper-button></a>
+        <a href="https://www.github.com/wmginsberg"><paper-button>GitHub</paper-button></a>
+      </div> 
+    </paper-card>
+
     </div>
 
   </template>
