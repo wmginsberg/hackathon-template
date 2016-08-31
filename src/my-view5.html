@@ -54,16 +54,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         min-height: 200px;
         max-width: 250px;
       }
+      #highlight, a {
+        color: #4285f4;
+        font-weight: 700;
+        text-decoration: none;
+      }
     </style>
 
     <div class="card">
-      <div class="circle">5</div>
+      <!-- <div class="circle">5</div> -->
       <h1>Meet the Team</h1>
-      <p>A trio of Polymer team members are here to empower you to #usetheplatform and make awesome web applications with the very best cutting edge technology the web platform has to offer.</p>
+      <p>A pair of Polymer team members are here to empower you to <span id="highlight">#usetheplatform</span> and make awesome web applications with the very best cutting edge technology the web platform has to offer.</p>
 
-    <paper-card heading="Elliott Marquez" image="images/emarquez.jpeg" alt="Elliott will be right back.">
+    <paper-card -heading="Elliott Marquez" image="images/emarquez.jpeg" alt="Elliott will be right back.">
       <div class="card-content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus urna condimentum, finibus orci et, pharetra tortor. Curabitur quis velit metus. In pharetra purus nec neque auctor pellentesque. 
+        <span id="highlight">Elliott Marquez</span><br>
+        Elliott is an Engineer on the Polymer team. He is originally from San Antonio, TX, studied Computer Science at MIT, and //TODO
       </div>
       <div class="card-actions">
         <paper-button href="">Twitter</paper-button>
@@ -71,7 +77,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>  
     </paper-card>
 
-    <paper-card heading="Fred Schott" image="images/fschott.jpeg" alt="Fred will be right back.">
+<!--     <paper-card heading="Fred Schott" image="images/fschott.jpeg" alt="Fred will be right back.">
       <div class="card-content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus urna condimentum, finibus orci et, pharetra tortor. Curabitur quis velit metus. In pharetra purus nec neque auctor pellentesque. 
       </div>
@@ -80,10 +86,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-button href="">GitHub</paper-button>
       </div> 
     </paper-card>
-
-    <paper-card heading="Wendy Ginsberg" image="images/wmginsberg.jpeg" alt="Wendy will be right back.">
+ -->
+    <paper-card -heading="Wendy Ginsberg" image="images/wmginsberg.jpeg" alt="Wendy will be right back.">
       <div class="card-content">
-        Wendy is a Product Manager on the Polymer team working on Growth, Onboarding, and Outreach. She is originally from New York, studied Computer Science at Brown, and loves turtles. 
+        <span id="highlight">Wendy Ginsberg</span><br>
+        Wendy is a Product Manager on the Polymer team. She is originally from Jericho, NY, studied Computer Science at Brown, and loves turtles. 
       </div>
       <div class="card-actions">
         <a href="http://www.twitter.com/wmginsberg"><paper-button>Twitter</paper-button></a>
