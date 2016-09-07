@@ -1,0 +1,65 @@
+<link rel="import" href="../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="themed-youtube">
+  <template>
+    <style>
+      :host {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: inline-block;
+        border: 1px solid black;
+        margin-bottom: 5px;
+      }
+
+      paper-header-panel {
+        width: 400px;
+        height: 350px; 
+      }
+
+      #content {
+        background-color: white;
+        padding: 6px;
+      }
+
+      #header {
+        color: white;
+        padding: 6px;
+      }
+    </style>
+
+    <paper-header-panel>
+      <div id="header" class="paper-header">[[header]]</div>
+      <div id="content">
+        <div>adsfasdfasdf</div>
+        <google-youtube video-id="[[videoId]]"></google-youtube>
+      </div>
+    </paper-header-panel>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'themed-youtube',
+      properties: {
+        color: {
+          type: String,
+          observer: 'colorChanged'
+        },
+
+        videoId: {
+          type: String,
+          value: 'dQw4w9WgXcQ'
+        },
+
+        header: {
+          type: String,
+          value: 'this is the default header'
+        }
+      },
+
+      colorChanged: function(newColor) {
+        this.$.header.style['background-color'] = newColor;
+      }
+    });
+  </script>
+</dom-module>
