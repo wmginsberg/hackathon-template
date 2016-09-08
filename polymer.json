@@ -7,5 +7,9 @@
     "src/my-view3.html",
     "src/my-view4.html",
     "src/my-view5.html"
+  ],
+  "sources": [
+  	"images/**",
+    "manifest.json"
   ]
 }

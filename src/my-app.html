@@ -140,6 +140,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // load page import on demand.
         this.importHref(
           this.resolveUrl('my-' + page + '.html'), null, null, true);
+      },
+
+      _convertToTitle: function(page) {
+        var dic = {'view1':'about-polymer','view2':'about-pwas','view3':'get-started','view4':'get-help','view5':'meet-the-team'};
       }
 
     });

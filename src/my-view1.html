@@ -8,10 +8,10 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
-<link rel="import" href="../bower_components/sign-here/sign-here.html">
-<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
+<link rel="import" href="/bower_components/sign-here/sign-here.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
 <link rel="import" href="themed-youtube.html">
 
 <dom-module id="my-view1">
@@ -83,28 +83,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <p>Web development can be broken down into two essential parts: frontend and backend.</p>
       <p>Backend is where the server is located. It typically handles operations such as serving the
         web page, serving components, responding to fetch requests and authentication. Popular
-        backend frameworks and platforms include Node.js, Django, and Ruby on Rails.
+        backend frameworks and platforms include Node.js, Django, and Ruby on Rails. If you follow along
+        with our tutorials, you'll be using Node.js.
       </p>
-      <p>Frontend is served with the webpages. This is the code that does not run on the server but
-        on the browser. It controls how the user interacts with the page and communicates to the
-        backend via http requests. <a href="https://www.polymer-project.org/1.0/">Polymer</a>
-        is a frontend library that offers an easier way to create webcomponents and webapps.
+      <p>Frontend is served with webpages. This is the code that does not run on the server, but
+        on the browser. It controls how the user interacts with the page and communicates with the
+        backend via HTTP requests. <a href="https://www.polymer-project.org/1.0/">Polymer</a>
+        is a frontend library that offers an easier way to create beautiful, responsive webapps.
       </p>
-      <p>Polymer focuses on <a href="http://webcomponents.org/">webcomponents</a>. Webcomponents are
-        a new spec that incorporate technologies such as Shadow DOM, HTML Templating, and HTML imports.
+      <p>Polymer focuses on <a href="http://webcomponents.org/">Web Components</a>. Web Components are
+        a new spec that incorporate 4 innovative web technologies:
+        <ul>
+          <li><strong>Shadow DOM</strong>: </li>
+          <li><strong>HTML Templating</strong>: </li>
+          <li><strong>HTML Imports</strong>: </li>
+          <li><strong>Custom Elements</strong>: </li>
+        </ul>
         Shadow DOM encapsulates HTML so that you can focus on small parts of your code at a time and
-        not have other parts of the
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a>
+        not have other parts of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM</a>
         interfere with the DOM in your component. HTML templating is a standard built into HTML that
         allows you to create templates, so you don't have to fumble around with getting third-party
         templating to work. HTML imports are also a standard way to inject HTML into your page. This
         again is a new standard, so you don't have to learn a bunch of frameworks' module importing
         syntax.
       </p>
-      <p>With Polymer, you create many encapsulated webcomponents use them, reuse them, and then
-        hook them all together so that you have interoperability. The good thing about encapsulated
-        webcomponents is that you can use them in almost any project or framework! They are designed
-        to be modular and are a standard, so they just work in any project.
+      <p>With Polymer, you can create many encapsulated Web Components to use, reuse, and
+        hook together, so you can easily make something super powerful with just a few lines of HTML.
+        The good thing about encapsulated Web Components is that you can use them in almost any project 
+        or framework! They are modular, and because they are standardized across the web, they <i>just work</i> 
+        in any project.
       </p>
     </div>
     
@@ -112,7 +119,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>Why use Polymer?</h1>
       <p>It all comes down to this: It's easy!</p>
       <p>Building web applicaitons with Polymer has never been easier. Polymer allows you to
-        encapsulate many parts of you webpage in usable, reusable, modular webcomponents. Here is
+        encapsulate many parts of you webpage in usable, reusable, modular Web Components. Here is
         an example of the <code>sign-here</code> element:</p>
       <div class="centerDemoWrapper">
         <demo-snippet>
@@ -123,7 +130,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 border: solid black 1px;
               }
             </style>
-            <link rel="import" href="/path-to-element/sign-here.html">
+            <link rel="import" href="/bower_components/sign-here/sign-here.html">
             <sign-here width="250" height="200"></sign-here>
           </template>
         </demo-snippet>
@@ -140,7 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="centerDemoWrapper">
         <demo-snippet>
           <template is="dom-bind">
-            <link rel="import" href="/path-to-element/paper-input.html">
+            <link rel="import" href="/bower_components/paper-input/paper-input.html">
             <div>Your input is: [[variableName]]</div>
             <paper-input value="{{variableName}}" label="Two-way binding"></paper-input>
             <paper-input value="[[variableName]]" label="One-way binding"></paper-input>
