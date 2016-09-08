@@ -8,8 +8,13 @@
     "src/my-view4.html",
     "src/my-view5.html"
   ],
-  "sources": [
-  	"images/**",
-    "manifest.json"
+  "sourceGlobs": [
+   "src/**/*",
+   "images/**/*",
+   "bower.json"
+  ],
+  "includeDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
   ]
 }
