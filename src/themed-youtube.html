@@ -13,8 +13,8 @@
       }
 
       paper-header-panel {
-        width: 400px;
-        height: 350px; 
+        height: 350px;
+        max-width: 100%;
       }
 
       #content {
@@ -31,7 +31,7 @@
     <paper-header-panel>
       <div id="header" class="paper-header">[[header]]</div>
       <div id="content">
-        <google-youtube video-id="[[videoId]]"></google-youtube>
+        <google-youtube video-id="[[videoId]]" width="250px"></google-youtube>
       </div>
     </paper-header-panel>
   </template>
