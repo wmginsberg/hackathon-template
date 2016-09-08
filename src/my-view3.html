@@ -43,13 +43,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      h2 {
+        font-size: 20px;
+        margin: 16px 0;
+        color: #212121;
+      }
+      pre {
+        background-color: rgb(244, 245, 246);
+        padding: 10px;
+      }
     </style>
 
     <div class="card">
       <!-- <div class="circle">3</div> -->
       <h1>Getting Started with Polymer</h1>
-      <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+      <h2>Install the Polymer CLI</h2>
+      <ol>
+        <li><a href="https://nodejs.org/en/download/">Install the LTS version (4.x) of Node.js</a>. The current version (6.x) should work, but is not officially supported. Versions below LTS are not supported.</li>
+        <li>Install <a href="https://bower.io/">Bower</a> so that you can later add pre-made elements</li>
+        <pre>npm install -g bower</pre>
+        <li>Install the Polymer CLI</li>
+        <pre>npm install -g polymer-cli</pre>
+      </ol>
+
+      <h2>Get the project boilerplate</h2>
+      <ol>
+        <li>Create a new project folder to start from</li>
+        <pre>mkdir my-app
+cd my-app</pre>
+        <li>Initialize your project</li>
+        <pre>polymer init application</pre>
+      </ol>
+      <div>Simply using <code>polymer init</code> will give you options to create other demos like
+        a custom element or a sample PWA.</div>
+
+      <h2>Serve your project</h2>
+      <div>You can serve the application using the Polymer CLI, and file changes you make will be immediately visible by refreshing your browser.</div>
+      <pre>polymer serve --open</pre>
+      <div>The task above automatically opens up your default web browser and fetches the locally-hosted application (at http://localhost:8080).</div>
+      
     </div>
 
   </template>
