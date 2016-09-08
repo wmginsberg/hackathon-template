@@ -9,6 +9,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+<link rel="import" href="../bower_components/sign-here/sign-here.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="themed-youtube.html">
 
 <dom-module id="my-view1">
 
@@ -43,6 +47,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+
+      h2 {
+        font-size: 20px;
+        margin: 16px 0;
+        color: #212121;
+      }
+
+      .centerDemoWrapper {
+        text-align: center;
+      }
+
+      .centerDemoWrapper demo-snippet {
+        display: inline-block;
+
+        --demo-snippet: {
+          text-align: start;
+        }
+      }
+
+      a {
+        color: #4285f4;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      iframe {
+        width: 100%;
+        height: 1000px;
+      }
     </style>
 
     <div class="card">
@@ -52,18 +85,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
 
       <h1>Why use Polymer?</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-    </div>
+      <p>It all comes down to this: It's easy!</p>
+      <p>Building web applicaitons with Polymer has never been easier. Polymer allows you to
+        encapsulate many parts of you webpage in usable, reusable, modular webcomponents. Here is
+        an example of the <code>sign-here</code> element:</p>
 
+      <div class="centerDemoWrapper">
+        <demo-snippet>
+          <template>
+            <style>
+              sign-here {
+                display: inline-block;
+                border: solid black 1px;
+              }
+            </style>
+            <link rel="import" href="/path-to-element/sign-here.html">
+            <sign-here width="450" height="200"></sign-here>
+          </template>
+        </demo-snippet>
+      </div>
+
+      <p>This element, allows you to sign in a box with your mouse or touch, but the only thing
+        we had to implement was an html import, and put the element tag in there with some starting
+        parameters. Polymer makes complex code simple and encapsulated.</p>
+      
+      <h2>Data Binding</h2>
+      <p>Polymer also makes it easy to share data across your app. One way we are able to do is is
+        via data binding</p>
+      
+      <div class="centerDemoWrapper">
+        <demo-snippet>
+          <template is="dom-bind">
+            <link rel="import" href="/path-to-element/paper-input.html">
+            <div>Your input is: [[variableName]]</div>
+            <paper-input value="{{variableName}}" label="Two-way binding"></paper-input>
+            <paper-input value="[[variableName]]" label="One-way binding"></paper-input>
+          </template>
+        </demo-snippet>
+      </div>
+      
+      <h2>Custom Elements</h2>
+      <p>If there isn't an element that solves your issue, you can create your own with its own
+        properties. In the following demo, we have created a simple element called
+        <code>themed-youtube</code> which is a small themed, reusable container that allows you to
+        set the color, video, and header title. It is even possible to data-bind to these values.</p>
+      <div>Source code for this demo can be found <a href="https://gist.github.com/e111077/384e0b82925cffe6b2472479dc387e82">here</a>.</div>
+      <themed-youtube color="#1976D2"></themed-youtube>
+      <themed-youtube color="#FF5252" video-id="EIyixC9NsLI" header="{{badgerHeader}}"></themed-youtube>
+      <themed-youtube color="#757575" video-id="J4i0xJnQUzU" header="Polymer@I/O"></themed-youtube>
+      <themed-youtube color="#212121" video-id="gCjge4cRFE0" header="PUPPIES!!"></themed-youtube>
+      
+      <paper-input value="{{badgerHeader}}" label="badger header"></paper-input>
+    </div>
   </template>
 
   <script>
 
     Polymer({
 
-      is: 'my-view1'
+      is: 'my-view1',
 
+      properties: {
+        badgerHeader: {
+          type: String,
+          value: 'this is the default header'
+        }
+      }
     });
 
   </script>
