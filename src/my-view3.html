@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-youtube/google-youtube.html">
 
 <dom-module id="my-view3">
 
@@ -52,6 +53,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background-color: rgb(244, 245, 246);
         padding: 10px;
       }
+      google-youtube {
+        display: inline-block;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100vh;
+      }
     </style>
 
     <div class="card">
@@ -81,7 +90,24 @@ cd my-app</pre>
       <div>You can serve the application using the Polymer CLI, and file changes you make will be immediately visible by refreshing your browser.</div>
       <pre>polymer serve --open</pre>
       <div>The task above automatically opens up your default web browser and fetches the locally-hosted application (at http://localhost:8080).</div>
-      
+    </div>
+
+    <div class="card">
+      <h1>Get Informed</h1>
+      <h2>Codelabs</h2>
+      <div>If you don't know where to start, you can always go through one of our codelabs that guide you every step of the way.</div>
+      <ul>
+        <li><a href="https://codelabs.developers.google.com/polymer-summit">Polymer Summit Codelabs</a></li>
+        <li><a href="https://codelabs.developers.google.com/?cat=Web">Google I/O Codelabs</a>(note: this web section does not stictly contain only Polymer codelabs)</li>
+      </ul>
+      <h2>Polycasts</h2>
+      <div>We have a great set of <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo">videos on Youtube</a> called Polycasts. The Polycasts run through all sorts of scenarios and topics.</div>
+      <div>Here are a few relevant ones:</div>
+      <google-youtube video-id="pj2lmXVa84U"></google-youtube>
+      <google-youtube video-id="1sx6YNn58OQ"></google-youtube>
+      <google-youtube video-id="m1hFhDYDY6o"></google-youtube>
+      <google-youtube video-id="k1eR_3KqJms"></google-youtube>
+      <google-youtube video-id="xRONodYEF2A"></google-youtube>
     </div>
 
   </template>
