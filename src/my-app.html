@@ -64,7 +64,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: 15px;
       }
 
-
+      iron-pages {
+        height: 100%;
+      }
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -104,6 +106,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view3 name="view3"></my-view3>
           <my-view4 name="view4"></my-view4>
           <my-view5 name="view5"></my-view5>
+          <oops-page name="404"></oops-page>
         </iron-pages>
 
       </app-header-layout>
@@ -141,12 +144,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       _pageChanged: function(page) {
         // load page import on demand.
-        this.importHref(
-          this.resolveUrl('my-' + page + '.html'), null, null, true);
+        var dic = {'view1':'about-polymer','view2':'about-pwas','view3':'get-started','view4':'get-help','view5':'meet-the-team'};
+        if (dic[page]) {
+          this.importHref(
+            this.resolveUrl('my-' + page + '.html'), null, null, true);
+        } else {
+          this.page = '404';
+          this.importHref(
+            this.resolveUrl('oops-page.html'), null, null, true);
+        }
       },
 
       _convertToTitle: function(page) {
-        var dic = {'view1':'about-polymer','view2':'about-pwas','view3':'get-started','view4':'get-help','view5':'meet-the-team'};
       }
 
     });

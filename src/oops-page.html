@@ -1,0 +1,38 @@
+<dom-module id="oops-page">
+  <template>
+    <style>
+      :host {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+      }
+
+      #title {
+        font-size: 2em;
+      }
+
+      #wordsWrapper {
+        display: inline-block;
+      }
+
+      a {
+        color: #4285f4;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    </style>
+    <img src="../images/404.png" alt="Polymersaurus">
+    <div id="wordsWrapper">
+      <div id="title">Not found.</div>
+      <div>We're sorry, but the polymerosaurus can't find the page you were looking for.</div>
+      <div>Maybe head back to the <a href="/">homepage</a> or use one of the menu links instead?</div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'oops-page'
+    });
+  </script>
+</dom-module>
