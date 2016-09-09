@@ -8,10 +8,10 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/bower_components/iron-demo-helpers/demo-snippet.html">
-<link rel="import" href="/bower_components/sign-here/sign-here.html">
-<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+<link rel="import" href="../bower_components/sign-here/sign-here.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="themed-youtube.html">
 
 <dom-module id="my-view1">
@@ -130,7 +130,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 border: solid black 1px;
               }
             </style>
-            <link rel="import" href="/bower_components/sign-here/sign-here.html">
             <sign-here width="250" height="200"></sign-here>
           </template>
         </demo-snippet>
@@ -147,7 +146,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="centerDemoWrapper">
         <demo-snippet>
           <template is="dom-bind">
-            <link rel="import" href="/bower_components/paper-input/paper-input.html">
             <div>Your input is: [[variableName]]</div>
             <paper-input value="{{variableName}}" label="Two-way binding"></paper-input>
             <paper-input value="[[variableName]]" label="One-way binding"></paper-input>
