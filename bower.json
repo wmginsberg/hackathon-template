@@ -23,8 +23,5 @@
     "paper-input": "PolymerElements/paper-input#^1.1.18",
     "google-youtube": "GoogleWebComponents/google-youtube#^1.2.1",
     "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.6"
-  },
-  "devDependencies": {
-    "web-component-tester": "^4.0.0"
   }
 }

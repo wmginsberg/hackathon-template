@@ -2,11 +2,11 @@
   "entrypoint": "index.html",
   "shell": "src/my-app.html",
   "fragments": [
-    "src/my-view1.html",
-    "src/my-view2.html",
-    "src/my-view3.html",
-    "src/my-view4.html",
-    "src/my-view5.html",
+    "src/about-polymer.html",
+    "src/about-pwas.html",
+    "src/get-started.html",
+    "src/get-help.html",
+    "src/meet-the-team.html",
     "src/oops-page.html"
   ],
   "sourceGlobs": [
