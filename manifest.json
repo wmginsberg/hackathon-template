@@ -1,5 +1,6 @@
 {
-  "name": "Polymer @ PenApps",
+  "version": 2,
+  "name": "PolyHack",
   "short_name": "PolyHack",
     "icons": [{
       "src": "images/app-icon-32.png",
