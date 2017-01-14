@@ -21,7 +21,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
 <link rel="import" href="my-icons.html">
 
-<dom-module id="my-app">
+<dom-module id="hack-with-polymer">
 
   <template>
 
@@ -114,11 +114,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages role="main" selected="[[page]]" attr-for-selected="name">
-          <my-view1 name="about-polymer"></my-view1>
-          <my-view2 name="about-pwas"></my-view2>
-          <my-view3 name="get-started"></my-view3>
-          <my-view4 name="get-help"></my-view4>
-          <my-view5 name="meet-the-team"></my-view5>
+          <about-polymer name="about-polymer"></about-polymer>
+          <about-pwas name="about-pwas"></about-pwas>
+          <get-started name="get-started"></get-started>
+          <get-help name="get-help"></get-help>
+          <meet-the-team name="meet-the-team"></meet-the-team>
           <oops-page name="404"></oops-page>
         </iron-pages>
 
@@ -132,7 +132,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer({
 
-      is: 'my-app',
+      is: 'hack-with-polymer',
 
       properties: {
 
