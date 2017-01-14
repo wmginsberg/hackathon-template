@@ -95,11 +95,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer>
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="/view1">About Polymer</a>
-          <a name="view2" href="/view2">About PWAs</a>
-          <a name="view3" href="/view3">Get Started</a>
-          <a name="view4" href="/view4">Get Help</a>
-          <a name="view5" href="/view5">Meet the Team</a>
+          <a name="about-polymer" href="/about-polymer">About Polymer</a>
+          <a name="about-pwas" href="/about-pwas">About PWAs</a>
+          <a name="get-started" href="/get-started">Get Started</a>
+          <a name="get-help" href="/get-help">Get Help</a>
+          <a name="meet-the-team" href="/meet-the-team">Meet the Team</a>
         </iron-selector>
       </app-drawer>
 
@@ -114,11 +114,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </app-header>
 
         <iron-pages role="main" selected="[[page]]" attr-for-selected="name">
-          <my-view1 name="view1"></my-view1>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3>
-          <my-view4 name="view4"></my-view4>
-          <my-view5 name="view5"></my-view5>
+          <my-view1 name="about-polymer"></my-view1>
+          <my-view2 name="about-pwas"></my-view2>
+          <my-view3 name="get-started"></my-view3>
+          <my-view4 name="get-help"></my-view4>
+          <my-view5 name="meet-the-team"></my-view5>
           <oops-page name="404"></oops-page>
         </iron-pages>
 
@@ -152,23 +152,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       ],
 
       _routePageChanged: function(page) {
-        this.page = page || 'view1';
+        this.page = page || 'about-polymer';
       },
 
       _pageChanged: function(page) {
         // load page import on demand.
-        var dic = {'view1':'about-polymer','view2':'about-pwas','view3':'get-started','view4':'get-help','view5':'meet-the-team'};
-        if (dic[page]) {
-          this.importHref(
-            this.resolveUrl('my-' + page + '.html'), null, null, true);
-        } else {
-          this.page = '404';
-          this.importHref(
-            this.resolveUrl('oops-page.html'), null, null, true);
+        if (page === '404') {
+          return;
         }
+
+        this.importHref(
+            this.resolveUrl(page + '.html'), null, this._hande404, true);
       },
 
-      _convertToTitle: function(page) {
+      _hande404: function() {
+        this.page = '404';
+        this.importHref(
+            this.resolveUrl('oops-page.html'), null, null, true);
       }
 
     });
