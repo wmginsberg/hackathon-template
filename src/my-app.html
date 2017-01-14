@@ -67,6 +67,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       iron-pages {
         height: 100%;
       }
+
+      [title] span {
+        background-color: white;
+        padding: 3px;
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      }
+
+      [title] span img {
+        margin: 0 auto;
+      }
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -96,7 +109,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-            <div title><img src="../images/logo.svg"/>Polymer @ Hack@Brown</div>
+            <div title><span><img src="../images/logo.svg"/></span> @ Hack@Brown</div>
           </app-toolbar>
         </app-header>
 
