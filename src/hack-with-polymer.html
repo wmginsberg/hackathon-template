@@ -164,8 +164,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         // error handling here does not work with firebase rewrites.
-        console.log(this.importHref(
-        this.resolveUrl(page + '.html'), null, this._handle404, true));
+        this.importHref(
+          this.resolveUrl(page + '.html'), null, this._handle404, true);
       },
 
       _handle404: function() {
