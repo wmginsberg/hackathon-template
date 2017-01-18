@@ -129,6 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
+    var VALID_PAGES = ['about-polymer', 'about-pwas', 'get-started', 'get-help', 'meet-the-team'];
 
     Polymer({
 
@@ -157,20 +158,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       _pageChanged: function(page) {
         // load page import on demand.
-        if (page === '404') {
+        if (VALID_PAGES.indexOf(page) === -1) {
+          this._handle404();
           return;
         }
 
-        this.importHref(
-            this.resolveUrl(page + '.html'), null, this._hande404, true);
+        // error handling here does not work with firebase rewrites.
+        console.log(this.importHref(
+        this.resolveUrl(page + '.html'), null, this._handle404, true));
       },
 
-      _hande404: function() {
+      _handle404: function() {
         this.page = '404';
         this.importHref(
             this.resolveUrl('oops-page.html'), null, null, true);
       }
-
     });
 
   </script>
