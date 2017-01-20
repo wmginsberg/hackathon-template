@@ -22,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="manifest" href="/manifest.json">
 
 
-  <script>
+  <script async>
 
     // setup Polymer options
     window.Polymer = {lazyRegister: true, dom: 'shadow'};
@@ -50,7 +50,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   </script>
 
-  <link rel="import" href="/src/hack-with-polymer.html">
+  <link async rel="import" href="/src/hack-with-polymer.html">
 
   <style>
 
@@ -66,10 +66,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 </head>
 <body>
+  <noscript>Turning off javascript makes me sad :(</noscript>
 
   <hack-with-polymer></hack-with-polymer>
 
-  <script>
+  <script async>
     // analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
