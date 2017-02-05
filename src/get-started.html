@@ -138,6 +138,17 @@ cd my-app</pre>
       </ul>
     </div>
 
+    <div class="card">
+      <h1>Using Polymer in an Express Project</h1>
+      <div>If you are wondering on how to structure an application and deal with routing a polymer application in an express project, then take a look at <a href="https://wmginsberg.github.io/blog/poly-express">this article by Wendy</a>.</div>
+    </div>
+
+    <div>
+      <input id="name" type="text">
+      <input type="text" id="address">
+      <button>submit</button>
+    </div>
+    <iron-ajax url="/signup" method="POST" id="ajax"></iron-ajax>
   </template>
 
   <script>
